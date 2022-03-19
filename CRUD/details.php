@@ -59,14 +59,14 @@ require_once 'actions/db_connect.php';
             <div class="card" style="width: 18rem;">
   <img src='images/<?php echo $image ?>' class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title"><?php echo $price ?></h5>
-    <p class="card-text"><?php echo $short_description ?> </p>
-    <p class="card-text"><?php echo $type ?> </p>
-    <p class="card-text"><?php echo $author_first_name ?> </p>
-    <p class="card-text"><?php echo $author_last_name ?> </p>
-    <p class="card-text"><?php echo $publisher_name ?> </p>
-    <p class="card-text"><?php echo $publisher_address ?> </p>
-    <p class="card-text"><?php echo $publish_date ?> </p>
+    <h5 class="card-title border border-secondary">The price : <?php echo $price ?></h5>
+    <p class="card-text border border-secondary"> About : <?php echo $short_description ?> </p>
+    <p class="card-text border border-secondary"> Type : <?php echo $type ?> </p>
+    <p class="card-text border border-secondary">Author first name : <?php echo $author_first_name ?> </p>
+    <p class="card-text border border-secondary "> Author last name :<?php echo $author_last_name ?> </p>
+    <p class="card-text border border-secondary">Publisher's name : <?php echo $publisher_name ?> </p>
+    <p class="card-text border border-secondary"> Publisher's address<?php echo $publisher_address ?> </p>
+    <p class="card-text border border-secondary">Publish date: <?php echo $publish_date ?> </p>
    
    
     <a href="index.php" class="btn btn-success">Home</a>
