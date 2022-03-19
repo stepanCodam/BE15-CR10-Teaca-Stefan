@@ -62,8 +62,8 @@ mysqli_close($connect);
                         <th>Image</th>
                         <th>Name</th>
                         <th>price</th>
-                        <th>Action</th>
-                        <th>Action</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>

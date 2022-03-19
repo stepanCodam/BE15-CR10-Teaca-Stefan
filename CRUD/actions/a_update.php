@@ -15,13 +15,16 @@ if ($_POST) {
     $publish_date =$_POST['publish_date'];
     //variable for upload images errors is initialised
     $uploadError = '';
+    
 
     $image = file_upload($_FILES['image']);//file_upload() called  
     if($image->error===0){
         ($_POST["image"]=="product.jpg")?: unlink("../images/$_POST[image]");           
-        $sql = "UPDATE bookshop SET name = '$name', price = $price, image = '$image->fileName','$short_description' WHERE id = {$id}";
+        $sql = "UPDATE bookshop SET name = '$name', price = $price, image = '$image->fileName', short_description = '$short_description',type = '$type',
+        author_first_name='$author_first_name',author_last_name ='$author_last_name',publisher_name ='$publisher_name', publisher_address='$publisher_address',publish_date ='$publish_date'   WHERE id = {$id}";
     }else{
-        $sql = "UPDATE bookshop SET name = '$name', price = $price WHERE id = {$id}";
+        $sql = "UPDATE bookshop SET name = '$name', price = $price , short_description ='$short_description',type = '$type',
+         author_first_name='$author_first_name',author_last_name ='$author_last_name',publisher_name ='$publisher_name',publisher_address='$publisher_address',publish_date ='$publish_date' WHERE id = {$id}";
     }    
     if (mysqli_query($connect, $sql) === TRUE) {
         $class = "success";
@@ -59,3 +62,5 @@ if ($_POST) {
         </div>
     </body>
 </html>
+
+
