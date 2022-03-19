@@ -6,13 +6,20 @@ if ($_POST) {
     $name = $_POST['name'];
     $price = $_POST['price'];
     $id = $_POST['id'];
+    $short_description =$_POST['short_description'];
+    $type = $_POST['type'];
+    $author_first_name =$_POST['author_first_name'];
+    $author_last_name =$_POST['author_last_name'];
+    $publisher_name =$_POST['publisher_name'];
+    $publisher_address = $_POST['publisher_address'];
+    $publish_date =$_POST['publish_date'];
     //variable for upload images errors is initialised
     $uploadError = '';
 
     $image = file_upload($_FILES['image']);//file_upload() called  
     if($image->error===0){
         ($_POST["image"]=="product.jpg")?: unlink("../images/$_POST[image]");           
-        $sql = "UPDATE bookshop SET name = '$name', price = $price, image = '$image->fileName' WHERE id = {$id}";
+        $sql = "UPDATE bookshop SET name = '$name', price = $price, image = '$image->fileName','$short_description' WHERE id = {$id}";
     }else{
         $sql = "UPDATE bookshop SET name = '$name', price = $price WHERE id = {$id}";
     }    

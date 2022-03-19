@@ -10,6 +10,12 @@ if ($_GET['id']) {
         $name = $data['name'];
         $price = $data['price'];
         $image = $data['image'];
+        $short_description = $data['short_description'];
+        $author_first_name = $data['author_first_name'];
+        $author_last_name = $data['author_last_name'];
+        $publisher_name = $data['publisher_name'];
+        $publisher_address = $data['publisher_address'];
+        $publish_date = $data['publish_date'];
     } else {
         header("location: error.php");
     }
@@ -51,7 +57,34 @@ if ($_GET['id']) {
                     </tr>
                     <tr>
                         <th>image</th>
-                        <td><input class="form-control" type="file" name= "image" /></td>
+                        <td><input class="form-control" type="file" name= "image" /><?php ?></td>
+                    </tr>
+                    <tr>
+                        <th>short description</th>
+                        <td><input class="form-control" type="text" name= "short_description" /> <?php ?></td>
+                    </tr>
+                    <tr>
+                        <th>type</th>
+                        <td><input class="form-control" type="text" name= "type" /> <?php ?></td>
+                    </tr>
+                    <tr>
+                        <th>author first name</th>
+                        <td><input class="form-control" type="text" name= "author_first_name" /> <?php ?></td>
+                    </tr>
+                    <tr>
+                        <th>author last name</th>
+                        <td><input class="form-control" type="text" name= "author_last_name" /> <?php ?></td>
+                    </tr>
+                    <tr>
+                        <th>publisher name</th>
+                        <td><input class="form-control" type="text" name= "publisher_name" /> <?php ?></td>
+                    </tr>
+                    <tr>
+                        <th>publisher address</th>
+                        <td><input class="form-control" type="text" name= "publisher_address" /> <?php ?></td>
+                    </tr><tr>
+                        <th>publish_date</th>
+                        <td><input class="form-control" type="date" name= "publish_date" /> <?php ?></td>
                     </tr>
                     <tr>
                         <input type= "hidden" name= "id" value= "<?php echo $data['id'] ?>" />
