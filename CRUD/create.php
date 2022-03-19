@@ -35,6 +35,29 @@
                         <td><input class='form-control' type="text" name="short_description"  placeholder="short description" /></td>
                     </tr>  
                     <tr>
+                        <th>type</th>
+                        <td><input class="form-control" type="text" name= "type" /></td>
+                    </tr>
+                    <tr>
+                        <th>author first name</th>
+                        <td><input class="form-control" type="text" name= "author_first_name" /></td>
+                    </tr>
+                    <tr>
+                        <th>author last name</th>
+                        <td><input class="form-control" type="text" name= "author_last_name" /></td>
+                    </tr>
+                    <tr>
+                        <th>publisher name</th>
+                        <td><input class="form-control" type="text" name= "publisher_name" /></td>
+                    </tr>
+                    <tr>
+                        <th>publisher address</th>
+                        <td><input class="form-control" type="text" name= "publisher_address" /></td>
+                    </tr><tr>
+                        <th>publish_date</th>
+                        <td><input class="form-control" type="date" name= "publish_date" /></td>
+                    </tr>
+                    <tr>
                         <td><button class='btn btn-success' type="submit">Insert Product</button></td>
                         <td><a href="index.php"><button class='btn btn-warning' type="button">Home</button></a></td>
                     </tr>

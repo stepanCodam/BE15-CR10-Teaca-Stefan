@@ -6,11 +6,19 @@ if ($_POST) {
     $name = $_POST['name'];
     $price = $_POST['price'];
     $short_description =$_POST['short_description'];
+    $type = $_POST['type'];
+    $author_first_name =$_POST['author_first_name'];
+    $author_last_name =$_POST['author_last_name'];
+    $publisher_name =$_POST['publisher_name'];
+    $publisher_address = $_POST['publisher_address'];
+    $publish_date =$_POST['publish_date'];
     $uploadError = '';
+    
     //this function exists in the service file upload.
     $image = file_upload($_FILES['image']);  
    
-    $sql = "INSERT INTO bookshop (name, price, image,short_description) VALUES ('$name', $price,'$image->fileName','$short_description')";
+    $sql = "INSERT INTO bookshop (name, price, image,short_description,type,author_first_name,author_last_name,publisher_name,publisher_address,publish_date) 
+    VALUES ('$name', $price,'$image->fileName','$short_description','$type','$author_first_name','$author_last_name','$publisher_name','$publisher_address','$publish_date')";
 
     if (mysqli_query($connect, $sql) === true) {
         $class = "success";

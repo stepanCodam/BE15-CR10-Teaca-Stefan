@@ -11,6 +11,7 @@ if(mysqli_num_rows($result)  > 0) {
             <td><img class='img-thumbnail' src='images/" .$row['image']."'</td>
             <td>" .$row['name']."</td>
             <td>" .$row['price']."</td>
+            <td><a href='details.php?id=" .$row['id']."'><button class='btn btn-primary btn-sm' type='button'>Details</button></a>
             <td><a href='update.php?id=" .$row['id']."'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a>
             <a href='delete.php?id=" .$row['id']."'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a></td>
             </tr>";
@@ -49,7 +50,7 @@ mysqli_close($connect);
     </head>
     <body>
 
-    
+
         <div class="manageProduct w-75 mt-3">    
             <div class='mb-3'>
                 <a href= "create.php"><button class='btn btn-primary'type="button" >Add product</button></a>
@@ -61,6 +62,7 @@ mysqli_close($connect);
                         <th>Image</th>
                         <th>Name</th>
                         <th>price</th>
+                        <th>Action</th>
                         <th>Action</th>
                     </tr>
                 </thead>
